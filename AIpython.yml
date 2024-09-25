@@ -1,0 +1,4 @@
+name: AIpython
+channels:
+  - defaults
+prefix: C:\Users\Zhang ZhiXing\anaconda3\envs\AIpython
