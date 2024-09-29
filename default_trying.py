@@ -20,3 +20,4 @@ for i in range (8):
     turtle.left(45)
     #turtle.right(45)
 turtle.exitonclick()
+
