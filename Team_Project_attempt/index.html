@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Vehicle Share - 主页</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 自定义样式 -->
+  <style>
+    /* 更改页面背景色 */
+    body {
+      background-color: #e6f7f1; 
+    }
+
+    /* 自定义按钮特效 */
+    .btn-custom {
+      background-color: #17a2b8;
+      border: none;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #138496; /* 鼠标悬停时按钮变暗 */
+    }
+
+    /* 自定义导航栏颜色 */
+    .navbar {
+      background-color:  #2a9d8f; 
+    }
+
+    .navbar .nav-link {
+      color: white; /* 导航链接文字变白 */
+    }
+
+    .navbar .nav-link:hover {
+      color: #17a2b8; /* 悬停时导航链接文字变蓝 */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">E-Vehicle Share</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">首页</a>
+          </li>
+        </ul>
+        <!-- 用户登录按钮 -->
+        <a class="btn btn-outline-primary me-2" href="login.html">用户登录</a>
+        <a class="btn btn-outline-secondary" href="register.html">注册</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体内容 -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/4.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">上一张</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">下一张</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="bg-light text-center text-lg-start mt-5">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <h5 class="text-uppercase">E-Vehicle Share</h5>
+          <p>
+            这是一个电动车共享系统。我们致力于为城市提供便捷的车辆租赁服务。
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4">
+          <h5 class="text-uppercase">联系我们</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-dark">隐私政策</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">服务条款</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">社交媒体</a>
+            </li>
+          </ul>
+          <!-- 工作人员登录按钮放在联系我们的右边 -->
+          <a class="btn btn-custom mt-3" href="staff_login.html">工作人员登录</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 E-Vehicle Share. 保留所有权利。
+    </div>
+  </footer>
+
+  <!-- 引入 Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

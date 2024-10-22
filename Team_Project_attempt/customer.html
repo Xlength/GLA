@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户页面 - E-Vehicle Share</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">E-Vehicle Share</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">用户主页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">租车</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">归还车辆</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">查看账户</a>
+          </li>
+        </ul>
+        <!-- 右侧登出按钮 -->
+        <a class="btn btn-outline-danger" href="index.html">登出</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体内容 -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">欢迎回来，用户！</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">租车</h5>
+            <p class="card-text">点击按钮选择租用车辆</p>
+            <a href="rent.html" class="btn btn-primary">租车</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">归还车辆</h5>
+            <p class="card-text">点击按钮归还当前租赁的车辆</p>
+            <a href="return.html" class="btn btn-warning">归还车辆</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">查看账户</h5>
+            <p class="card-text">查看或修改账户信息</p>
+            <a href="profile.html" class="btn btn-info">查看账户</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入 Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
