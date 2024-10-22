@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>租车 - E-Vehicle Share</title>
+  <title>rent - E-Vehicle Share</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #map {
+        height: 400px; /* Adjust height as needed */
+        width: 100%; /* Full width of the container */
+    }
+  </style>
 </head>
-<body>
+<body onload="initMap()">
 
   <!-- 导航栏 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,30 +23,56 @@
 
   <!-- 租车内容 -->
   <div class="container mt-5">
-    <h2 class="text-center mb-4">选择您的租赁车辆</h2>
+    <h2 class="text-center mb-4">select your vehicle!</h2>
     <div class="row">
       <div class="col-md-6">
         <div class="card text-center">
           <div class="card-body">
-            <h5 class="card-title">电动车</h5>
-            <p class="card-text">租用一辆电动车</p>
-            <a href="#" class="btn btn-primary">租用车</a>
+            <h5 class="card-title">e-bike</h5>
+            <p class="card-text">rent an e-bike</p>
+            <a href="#" class="btn btn-primary">rent!</a>
           </div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="card text-center">
           <div class="card-body">
-            <h5 class="card-title">电动自行车</h5>
-            <p class="card-text">租用一辆电动自行车</p>
-            <a href="#" class="btn btn-primary">租用自行车</a>
+            <h5 class="card-title">e-vehicle</h5>
+            <p class="card-text">rent an e-vehicle</p>
+            <a href="#" class="btn btn-primary">rent!</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- 地图容器 -->
+  <div id="map"></div>
+
   <!-- 引入 Bootstrap JS -->
   <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Maps API 脚本 -->
+  <script>
+    // Initialize and add the map
+    function initMap() {
+        // Center the map at a specific location (example: University of Glasgow)
+        const glasgow = { lat: 55.8721, lng: -4.2882 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: glasgow,
+        });
+
+        // Example: Add a marker for a vehicle location
+        const vehicleMarker = new google.maps.Marker({
+            position: { lat: 55.8721, lng: -4.2882 },
+            map: map,
+            title: "E-Vehicle Location"
+        });
+    }
+  </script>
+
+  <!-- Google Maps API 加载 -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2cM4H9VXresHmwR_P7RpLcuwpKaZdriw"></script>
 </body>
 </html>
