@@ -12,7 +12,7 @@ public class HelloWorld {
         return a + b;
     }
 
-    public void swi(String s) {
+    public static void swi(String s) {
         int vs = 0, cs = 0;
         for (int i=0; i<s.length(); i++) {
         char c = s.charAt(i);
