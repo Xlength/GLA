@@ -1,3 +1,4 @@
+package previousOne;
 public class Employee {
     // Attributes
     private int employeeNumber;
