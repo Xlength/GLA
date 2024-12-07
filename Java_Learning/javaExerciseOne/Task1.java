@@ -1,4 +1,4 @@
-package javaExerciseOne;
+package javaExerciseone;
 /*
  Task 1 
 Write a Java method to compute and print the list of prime numbers less than a given parameter. 

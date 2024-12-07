@@ -1,4 +1,4 @@
-package javaExerciseOne;
+package javaExerciseone;
 /*
  Design and implement a class Monster representing a (simplified) monster in a monster-battling 
 game. A monster includes a type (a String), a number of hit points (an int), a number of attack 
@@ -10,7 +10,7 @@ You should also define the following two methods which are used when monsters ba
  */
 
 import java.util.Arrays;
-public class Monster {
+public abstract class Monster {
 
     protected String type;
     protected int hitPoints;
@@ -83,19 +83,19 @@ public class Monster {
         return "Monster type=" + type + 
         ", hitPoints=" + hitPoints + 
         ", attackPoints=" + attackPoints + 
-        ", weaknesses=" + Arrays.toString(weaknesses);
+        ", weaknesses=" + Arrays.toString(weaknesses) + "]";
     }
 
 
 public static void main(String[] args) {
-    Monster fireMonster = new Monster("Fire", 200, 100, new String[] { "Water" });
-    Monster waterMonster = new Monster("Water", 130, 50, new String[] { "Fire", "Electric" });
-    System.out.println(fireMonster.toString());
-    System.out.println(waterMonster.toString());
-    System.out.println(waterMonster);
+    // Monster fireMonster = new Monster("Fire", 200, 100, new String[] { "Water" });
+    // Monster waterMonster = new Monster("Water", 130, 50, new String[] { "Fire", "Electric" });
+    // System.out.println(fireMonster.toString());
+    // System.out.println(waterMonster.toString());
+    // System.out.println(waterMonster);
 
-    waterMonster.attack(fireMonster); // Should return true
-    System.out.println(fireMonster.getHitPoints()); // Should print fireMonster.getHitPoints();
+    // waterMonster.attack(fireMonster); // Should return true
+    // System.out.println(fireMonster.getHitPoints()); // Should print fireMonster.getHitPoints();
 }
 
 }

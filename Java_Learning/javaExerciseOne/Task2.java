@@ -1,4 +1,4 @@
-package javaExerciseOne;
+package javaExerciseone;
 /*
 Task 2 
 Write a Java method to compute and return the Nth Fibonacci number, which is a sequence of 
