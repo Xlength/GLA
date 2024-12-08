@@ -40,7 +40,9 @@ public class Venue {
         }
         return rowSeats.get(seatNum - 1);
     }
-
+    public List<List<Seat>> getRows() {
+        return rows;
+    }
     public void printDetails() {
         for (List<Seat> row : rows) {
             for (Seat seat : row) {
