@@ -56,22 +56,5 @@ public class GameCharacter {
         return "GameCharacter{name='" + name + "', cost=" + cost + ", powers=" + powers + "}";
     }
 
-    public static Set<GameCharacter> chooseCharacters(Set<GameCharacter> availableCharacters, Power... neededPowers) {
-        Set<Power> needed = new HashSet<>();
-        Collections.addAll(needed, neededPowers);
-        
-        Set<GameCharacter> selected = new HashSet<>();
-        for (GameCharacter character : availableCharacters) {
-            Set<Power> intersection = new HashSet<>(character.getPowers());
-            intersection.retainAll(needed);
-            if (!intersection.isEmpty()) {
-                selected.add(character);
-                needed.removeAll(intersection);
-            }
-            if (needed.isEmpty()) {
-                return selected;
-            }
-        }
-        return null; // Not all powers covered
-    }
+
 }

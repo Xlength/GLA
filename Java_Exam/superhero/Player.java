@@ -1,5 +1,6 @@
 package superhero;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,5 +31,21 @@ public class Player {
      */
     public Set<GameCharacter> getCharacters() {
         return characters;
+    }
+
+    public Set<GameCharacter> chooseCharacters(Power... neededPowers) {
+        Set<Power> remainingPowers = new HashSet<>(Set.of(neededPowers));
+        Set<GameCharacter> chosenCharacters = new HashSet<>();
+
+        for (GameCharacter character : characters) {
+            if (!remainingPowers.isEmpty()) {
+                Set<Power> powers = character.getPowers();
+                if (!powers.isEmpty() && !Collections.disjoint(powers, remainingPowers)) {
+                    chosenCharacters.add(character);
+                    remainingPowers.removeAll(powers);
+                }
+            }
+        }
+        return remainingPowers.isEmpty() ? chosenCharacters : null;
     }
 }
