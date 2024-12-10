@@ -54,5 +54,14 @@ public class Trade {
     public String toString() {
         return "Trade [gems=" + gems + ", amount=" + amount + ", goods=" + goods + "]";
     }
+
+    public void execute(Trader trader, Citizen citizen) {
+        if (!trader.getTrades().contains(this)) {
+            throw new IllegalArgumentException("Trade is not supported by the trader");
+        }
+        if (citizen.executeTrade(this)) {
+            trader.addRandomTrade(); // 添加随机 Trade
+        }
+    }
     
 }
