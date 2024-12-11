@@ -1,7 +1,20 @@
 package Mock_Exam.Java.MockJava;
 import java.util.HashMap;
 import java.util.Map;
+// List 的扩展：
 
+// 可用于存储顺序数据（如电影票订单、交易记录）。
+// 使用索引操作便于修改和插入特定位置的数据。
+
+// Set 的扩展：
+
+// 用于存储唯一的数据集合（如用户名、预定的座位编号）。
+// 重复数据会自动过滤，不需要额外处理。
+
+// Map 的扩展：
+
+// 适合表示键值关系（如用户ID与其预定信息、商品与价格）。
+// 可通过键快速查找值。
 public class MapExample {
     public static void main(String[] args) {
         // 创建一个Map

@@ -1,8 +1,5 @@
 package graphs;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Parses a graph specification and creates an array of Nodes.
  */

@@ -23,7 +23,16 @@ public class Venue {
             List<Seat> row = new ArrayList<>();
             char rowLabel = (char) ('A' + i - 1);
             for (int j = 0; j < seatTypes.length; j++) {
-                row.add(new Seat(rowLabel, j + 1, SeatType.valueOf(seatTypes[j])));
+                String type=seatTypes[j];
+                switch (type) {
+                    case "S":
+                        type = "STANDARD";
+                        break;
+                    case "D":
+                        type = "DELUXE";
+                        break;
+                }
+                row.add(new Seat(rowLabel, j + 1, SeatType.valueOf(type)));
             }
             rows.add(row);
         }
